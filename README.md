@@ -1,31 +1,18 @@
-## React Context API Made Simple – The Practical Guide
+#### Key Takeaways
 
-[To follow this React Context API tutorial](https://ibaslogic.com/blog/react-context-api/)
+- Not all of the state data in your app needs to be globally accessible (i.e placed in the context). Keep local state to where it’s needed.
 
-### Download/Clone this project
+- The context may not be practically suitable for an app with frequent state changes if you want to seamlessly avoid the issue of unnecessary components re-rendering.
 
-You can download or clone this project by running this command from your terminal:
+- Though, we can manage this issue by splitting the context into multiples. But in this case, the different part of the context data should be able to update independently.
 
-```
-git clone https://github.com/Ibaslogic/react-context-api
-```
 
-This will create a directory in the name of the project folder.
+#### Quick Tour
 
-Once you have the project files and folders bootstrapped, open it with your text editor.
-
-Next, switch inside the project directory and run:
-
-```
-npm install
-```
-
-This will install all the necessary dependencies in the local `node_modules` folder.
-
-Finally, start your development server by running:
-
-```
-npm start
-```
-
-You should see the app in your browser address bar at [http://localhost:3000](http://localhost:3000)
+>main context file - context.js
+>
+>main container wrapped by context api in index.js
+>
+>used contextType in class component TodosList.js
+>
+>used context consumer in function component TodoItem.js
